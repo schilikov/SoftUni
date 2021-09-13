@@ -1,0 +1,2 @@
+This is created in the first copy.
+This is added after the commit command.
