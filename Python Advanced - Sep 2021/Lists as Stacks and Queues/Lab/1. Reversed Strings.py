@@ -1,3 +1,4 @@
+# We must reverse and move the given string from "word" to "result"
 word = list(input())
 result = []
 
