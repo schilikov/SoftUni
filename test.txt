@@ -1,3 +1,0 @@
-This is created in the first copy.
-This is added after the commit command.
-This is a test of the Git Bash.
