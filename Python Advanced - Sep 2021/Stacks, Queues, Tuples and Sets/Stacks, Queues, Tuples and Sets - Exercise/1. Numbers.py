@@ -1,45 +1,23 @@
 # Use the commands to edit the sets and then print them
-line_one = set(input().split())
-line_two = set(input().split())
+first = set([int(x) for x in input().split()])
+second = set([int(x) for x in input().split()])
 
 n = int(input())
 for _ in range(n):
-    command = set(input().split())
-    if "Add" in command:
-        if "First" in command:
-            command.remove("Add")
-            command.remove("First")
-            for num in command:
-                line_one.add(num)
+    line_args = input().split()
+    command = line_args[0]
+    if command == "Add" and line_args[1] == "First":
+        [first.add(int(x)) for x in line_args[2:]]
+    elif command == "Add" and line_args[1] == "Second":
+        [second.add(int(x)) for x in line_args[2:]]
+    elif command == "Remove" and line_args[1] == "First":
+        current_set = set([int(x) for x in line_args[2:]])
+        first = first.difference(current_set)
+    elif command == "Remove" and line_args[1] == "Second":
+        current_set = set([int(x) for x in line_args[2:]])
+        second = second.difference(current_set)
+    else:
+        print(first.issubset(second) or second.issubset(first))
 
-        elif "Second" in command:
-            command.remove("Add")
-            command.remove("Second")
-            for num in command:
-                line_two.add(num)
-
-    elif "Remove" in command:
-        if "First" in command:
-            command.remove("Remove")
-            command.remove("First")
-            for num in command:
-                if num in line_one:
-                    line_one.remove(num)
-
-        elif "Second" in command:
-            command.remove("Remove")
-            command.remove("Second")
-            for num in command:
-                if num in line_two:
-                    line_two.remove(num)
-
-    elif "Check" in command and "Subset" in command:
-        if line_one.issubset(line_two) or line_two.issubset(line_one):
-            print("True")
-        else:
-            print("False")
-
-sorted_one, sorted_two = sorted(line_one), sorted(line_two)
-
-print(", ".join(sorted_one))
-print(", ".join(sorted_two))
+print(", ".join([str(x) for x in sorted(first)]))
+print(", ".join([str(x) for x in sorted(second)]))
