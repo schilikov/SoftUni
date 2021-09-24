@@ -30,7 +30,6 @@ secondary_colors_create = {
     "orange": ["red", "yellow"],
     "purple": ["red", "blue"],
     "green": ["blue", "yellow"],
-
 }
 
 for color in collected_colors:
