@@ -84,7 +84,7 @@ def get_up_left_win_condition(board, row_index, column_index, min_row_index, min
 
 def check_win_condition(board, row_index, column_index, win_count):
     min_column_index = max(column_index - win_count, -1)
-    max_column_index = min(column_index + win_count, len(board[column_index]))
+    max_column_index = min(column_index + win_count, len(board[row_index]))
 
     min_row_index = max(row_index - win_count, -1)
     max_row_index = min(row_index + win_count, len(board))
@@ -161,11 +161,21 @@ def check_win_condition(board, row_index, column_index, win_count):
     return False
 
 
+def is_player_choice_valid(board, player_choice):
+    is_column_index_valid = 0 <= player_choice < len(board[0])
+    has_column_space = is is_column_index_valid and board[0][player_choice] is None
+    return is_column_index_valid and has_column_space
+
+
 def play():
     current_player, other_player = 1, 2
 
     while True:
         player_choice = get_player_choice(current_player)
+        if not is_player_choice_valid(board, player_choice):
+            print("Column full or out of range. Try again!")
+            continue
+
         row_index, column_index = apply_player_choice(board, player_choice, current_player)
         if check_win_condition(board, row_index, column_index, 4):
             print_board(board)
