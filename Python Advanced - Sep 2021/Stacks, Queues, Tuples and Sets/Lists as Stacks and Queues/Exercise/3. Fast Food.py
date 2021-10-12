@@ -2,10 +2,7 @@
 from collections import deque
 
 food_quantity = int(input())
-queue_orders = deque()
-
-for num in input().split():
-    queue_orders.append(int(num))
+queue_orders = deque([int(x) for x in input().split()])
 
 print(max(queue_orders))
 
