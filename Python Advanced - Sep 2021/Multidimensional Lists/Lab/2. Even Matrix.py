@@ -1,6 +1,7 @@
 # Add to the matrix only the even nums and print the matrix
 n = int(input())
 
+
 def read_matrix():
     matrix = []
     for _ in range(n):

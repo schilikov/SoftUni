@@ -1,6 +1,7 @@
 # Add to the matrix and print all column sums
 n, m = [int(x) for x in input().split(", ")]
 
+
 def read_matrix():
     matrix = []
     for _ in range(n):
