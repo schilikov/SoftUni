@@ -6,24 +6,23 @@ def is_outside(r, c, size):
 
 def get_next_position(direction, r, c, steps):
     if direction == "up":
-        return (r - steps, c)
+        return r - steps, c
     if direction == "down":
-        return (r + steps, c)
+        return r + steps, c
     if direction == "left":
-        return (r, c - steps)
-    return (r, c + steps)
+        return r, c - steps
+    return r, c + steps
 
 
-size = 5
 matrix = []
-
-player_row, player_col = 0, 0
+size = 5
 targets_count = 0
+player_row, player_col = 0, 0
+
 for row in range(size):
-    elements = input().split()
-    matrix.append(elements)
+    matrix.append(input().split())
     for col in range(size):
-        element = elements[col]
+        element = matrix[row][col]
         if element == "A":
             player_row, player_col = row, col
         elif element == "x":

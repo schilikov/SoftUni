@@ -1,7 +1,8 @@
+# Create a matrix and do some modifications in it
 def is_invalid_position(size, row, col):
-    if row < 0 or col < 0 or row >= size or col >= size:
-        return True
-    return False
+    if 0 <= row < size and 0 <= col < size:
+        return False
+    return True
 
 
 size = int(input())

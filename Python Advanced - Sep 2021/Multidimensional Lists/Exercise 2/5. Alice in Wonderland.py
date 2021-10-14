@@ -6,12 +6,12 @@ def is_outside(row, col, size):
 
 def get_next_position(direction, r, c):
     if direction == "up":
-        return (r - 1, c)
+        return r - 1, c
     if direction == "down":
-        return (r + 1, c)
+        return r + 1, c
     if direction == "left":
-        return (r, c - 1)
-    return (r, c + 1)
+        return r, c - 1
+    return r, c + 1
 
 
 size = int(input())
@@ -20,8 +20,7 @@ matrix = []
 alice_row, alice_col, bags_of_tea = 0, 0, 0
 
 for _ in range(size):
-    line = input().split()
-    matrix.append([x for x in line])
+    matrix.append([x for x in input().split()])
 
 for r in range(size):
     for c in range(size):

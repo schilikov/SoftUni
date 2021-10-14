@@ -34,11 +34,11 @@ matrix = []
 
 santa_row, santa_col = 0, 0
 initial_good_kids = 0
+
 for row in range(size):
-    elements = input().split()
-    matrix.append(elements)
+    matrix.append(input().split())
     for col in range(size):
-        element = elements[col]
+        element = matrix[row][col]
         if element == "S":
             santa_row, santa_col = row, col
         elif element == "V":
@@ -57,11 +57,17 @@ while True:
     elif matrix[next_santa_row][next_santa_col] == "C":
         houses_in_range = get_houses_in_range(size, next_santa_row, next_santa_col)
         for row, col in houses_in_range:
-            if matrix[row][col] == "X":
-                presents -= 1
             if matrix[row][col] == "V":
-                presents -= 1
-                good_kids_count -= 1
+                if presents:
+                    presents -= 1
+                    good_kids_count -= 1
+                else:
+                    continue
+            if matrix[row][col] == "X":
+                if presents:
+                    presents -= 1
+                else:
+                    continue
             matrix[row][col] = "-"
     matrix[santa_row][santa_col] = "-"
     matrix[next_santa_row][next_santa_col] = "S"
