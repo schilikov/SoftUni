@@ -18,12 +18,12 @@ def is_inside(rows, cols, r, c):
 
 def get_next_position(direction, row, col):
     if direction == "U":
-       return (row - 1, col)
+       return row - 1, col
     if direction == "D":
-       return (row + 1, col)
+       return row + 1, col
     if direction == "L":
-       return (row, col - 1)
-    return (row, col + 1)
+       return row, col - 1
+    return row, col + 1
 
 
 rows, cols = [int(x) for x in input().split()]
