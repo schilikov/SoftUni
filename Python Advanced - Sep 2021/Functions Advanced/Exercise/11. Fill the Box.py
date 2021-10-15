@@ -1,3 +1,4 @@
+# Try to fill the box with cubes until you receive Finish
 def fill_the_box(height, length, width, *args):
     box_area = height * length * width
     failed = False
@@ -21,3 +22,8 @@ def fill_the_box(height, length, width, *args):
         return f"No more free space! You have {left_cubes} more cubes."
     else:
         return f"There is free space in the box. You could put {box_area} more cubes."
+
+# Test Codes
+# print(fill_the_box(2, 8, 2, 2, 1, 7, 3, 1, 5, "Finish"))
+# print(fill_the_box(5, 5, 2, 40, 11, 7, 3, 1, 5, "Finish"))
+# print(fill_the_box(10, 10, 10, 40, "Finish", 2, 15, 30))
