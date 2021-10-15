@@ -1,3 +1,4 @@
+# Print all possible combinations with the given length of the given count
 def combinations(names, count, current_names=[]):
     if len(current_names) == count:
         print(", ".join(current_names))
@@ -9,6 +10,12 @@ def combinations(names, count, current_names=[]):
         current_names.pop()
 
 
-namess = input().split(", ")
-countt = int(input())
-combinations(namess, countt)
+given_names = input().split(", ")
+given_count = int(input())
+combinations(given_names, given_count)
+
+# Test Inputs
+# Peter, George, Amy
+# 2
+# Mariya, Emily, Tom, Bob
+# 1

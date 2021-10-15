@@ -1,3 +1,4 @@
+# A program that generates all the possible expressions and their results
 def expression(nums, current_sum=0, current_expression=""):
     if not nums:
         print(f"{current_expression}={current_sum}")
@@ -8,3 +9,7 @@ def expression(nums, current_sum=0, current_expression=""):
 
 nums = [int(el) for el in input().split(", ")]
 expression(nums)
+
+# Test Inputs
+# 1, 2
+# 1, 1, 1, 1
