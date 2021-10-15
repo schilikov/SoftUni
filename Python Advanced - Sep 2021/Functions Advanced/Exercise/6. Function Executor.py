@@ -1,3 +1,4 @@
+# A function that controls 2 other functions and returns the result
 def func_executor(*args):
     result = []
     for func, func_args in args:
@@ -11,3 +12,6 @@ def sum_numbers(num1, num2):
 
 def multiply_numbers(num1, num2):
     return num1 * num2
+
+# Test Code
+# print(func_executor((sum_numbers, (1, 2)), (multiply_numbers, (2, 4))))
