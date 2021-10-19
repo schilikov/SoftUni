@@ -49,6 +49,7 @@ for row in range(len(board)):
     for col in range(len(board[0])):
         current_row, current_col = row, col
         current_idx = board_with_bombs[current_row][current_col]
+
         if not current_idx == "*":
             for position in positions:
                 pos_row, pos_col = position[0], position[1]
@@ -60,6 +61,7 @@ for row in range(len(board)):
                         if pos_row_idx == bomb_row and pos_col_idx == bomb_col:
                             number += 1
                             break
+
             board_with_bombs[current_row][current_col] = number
             number = 0
 
@@ -70,3 +72,19 @@ def printing_matrix(board):
 
 
 printing_matrix(board)
+
+
+# Test Inputs
+
+# 4
+# 4
+# (0, 3)
+# (1, 1)
+# (2, 2)
+# (3, 0)
+
+# 5
+# 3
+# (1, 1)
+# (2, 4)
+# (4, 1)
