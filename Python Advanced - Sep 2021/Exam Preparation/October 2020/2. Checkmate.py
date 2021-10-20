@@ -15,7 +15,6 @@ def is_inside(size, r, c):
 
 
 def searching_with_deltas(board, king, deltas):
-    row_count, col_count = len(board), len(board[0])
     delta_row, delta_col = deltas
     row_index, col_index = king
 
@@ -56,3 +55,23 @@ def print_result(queens):
 king = found_the_king(board)
 queens = capturing_queens(board, king)
 print_result(queens)
+
+# Test Inputs
+
+# . . . . . . . .
+# Q . . . . . . .
+# . K . . . Q . .
+# . . . Q . . . .
+# Q . . . Q . . .
+# . Q . . . . . .
+# . . . . . . Q .
+# . Q . Q . . . .
+
+# . . . . . . . .
+# . . . Q . . . .
+# . . . . . . . .
+# . . . . . . . .
+# Q . . . Q . . .
+# . . K . . . . .
+# . . . . . . Q .
+# . . . Q . . . .

@@ -32,3 +32,14 @@ if len(pizza_orders) == 0:
 if len(making_capacity) == 0:
     print("Not all orders are completed.")
     print(f"Orders left: {', '.join([str(x) for x in pizza_orders])}")
+
+# Test Inputs
+
+# 11, 6, 8, 1
+# 3, 1, 9, 10, 5, 9, 1
+
+# 10, 9, 8, 7, 5
+# 5, 10, 9, 8, 7
+
+# 12, -3, 14, 3, 2, 0
+# 10, 15, 4, 6, 3, 1, 22, 1

@@ -28,8 +28,8 @@ while bomb_effects and bomb_casings:
         bomb_casings.append(current_casing - 5)
 
     num = 0
-    for x in bombs_count.keys():
-        if bombs_count[x] >= 3:
+    for bomb in bombs_count.keys():
+        if bombs_count[bomb] >= 3:
             num += 1
 
     if num == 3:
@@ -57,3 +57,11 @@ sorted_dict = sorted(bombs_count.items(), key=lambda x: x[0])
 
 for key, value in sorted_dict:
     print(f"{key}: {value}")
+
+# Test Inputs
+
+# 5, 25, 25, 115
+# 5, 15, 25, 35
+
+# 30, 40, 5, 55, 50, 100, 110, 35, 40, 35, 100, 80
+# 20, 25, 20, 5, 20, 20, 70, 5, 35, 0, 10

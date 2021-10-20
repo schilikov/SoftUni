@@ -25,7 +25,6 @@ valid_commands = [
 ]
 
 size = int(input())
-game_status = None
 player_row, player_col = 0, 0
 
 matrix = []
@@ -40,10 +39,6 @@ coins_collected = 0
 path = []
 
 while True:
-    if coins_collected >= 100:
-        game_status = True
-        break
-
     command = input()
 
     if command not in valid_commands:
@@ -63,8 +58,38 @@ while True:
     path.append([next_row, next_col])
     player_row, player_col = next_row, next_col
 
-if game_status:
-    print(f"You won! You've collected {floor(coins_collected)} coins.")
-    print("Your path:")
-    for step in path:
-        print(step)
+    if coins_collected >= 100:
+        break
+
+
+print(f"You won! You've collected {floor(coins_collected)} coins.")
+print("Your path:")
+for step in path:
+    print(step)
+
+# Test Inputs
+
+# 5
+# 1 X 7 9 11
+# X 14 46 62 0
+# 15 33 21 95 X
+# P 14 3 4 18
+# 9 20 33 X 0
+# right
+# right
+# up
+# up
+# left
+# down
+
+# 8
+# 13 18 9 7 24 41 52 11
+# 54 21 19 X 6 4 75 6
+# 76 5 7 1 76 27 2 37
+# 92 3 25 37 52 X 56 72
+# 15 X 1 45 45 X 7 63
+# 1 63 P 2 X 43 5 1
+# 48 19 35 20 100 27 42 80
+# 73 88 78 33 37 52 X 22
+# up
+# left

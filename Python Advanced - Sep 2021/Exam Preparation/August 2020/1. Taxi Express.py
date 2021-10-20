@@ -21,3 +21,14 @@ if not customers:
 if customers and not taxis:
     print("Not all customers were driven to their destinations")
     print(f"Customers left: {', '.join([str(x) for x in customers])}")
+
+# Test Inputs
+
+# 4, 6, 8, 5, 1
+# 1, 9, 15, 10, 6
+
+# 10, 5, 8, 9
+# 2, 4, 5, 8
+
+# 2, 8, 4, 3, 11, 7
+# 10, 15, 4, 6, 3, 10, 2, 1

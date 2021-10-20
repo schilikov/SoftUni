@@ -41,3 +41,11 @@ if females:
     print(f"Females left: {', '.join([str(x) for x in females])}")
 else:
     print("Females left: none")
+
+# Test Inputs
+
+# 4 5 7 3 6 9 12
+# 12 9 6 1
+
+# 3 0 3 6 9 0 12
+# 12 9 6 1 2 3 15 13 4

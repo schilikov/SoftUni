@@ -1,7 +1,6 @@
 def numbers_searching(*args):
     numbers = [int(x) for x in args]
 
-    new_list = []
     double_nums = []
     whole_list = []
 
@@ -13,11 +12,8 @@ def numbers_searching(*args):
 
     for _ in range(len(numbers)):
         current_num = numbers.pop()
-        new_list.append(current_num)
         if current_num in numbers and current_num not in double_nums:
             double_nums.append(current_num)
-
-        new_list.append(current_num)
 
     double_nums.sort()
     whole_list.append(double_nums)

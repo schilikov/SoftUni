@@ -17,10 +17,7 @@ def next_move(direction, r, c):
 word = [str(x) for x in input()]
 size = int(input())
 
-matrix = []
-for _ in range(size):
-    line = [str(x) for x in input()]
-    matrix.append(line)
+matrix = [[str(x) for x in input()] for _ in range(size)]
 
 player_row, player_col = 0, 0
 for row in range(size):
@@ -49,3 +46,30 @@ for _ in range(command_count):
 print(''.join([str(x) for x in word]))
 for x in matrix:
     print(''.join([str(el) for el in x]))
+
+# Test Inputs
+
+# Hello
+# 4
+# P---
+# Mark
+# -l-y
+# --e-
+# 4
+# down
+# right
+# right
+# right
+
+# Initial
+# 5
+# -----
+# t-r--
+# --Pa-
+# --S--
+# z--t-
+# 4
+# up
+# left
+# left
+# left

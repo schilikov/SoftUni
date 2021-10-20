@@ -9,9 +9,7 @@ def is_outside(size, r, c):
 n = 7
 player_one, player_two = input().split(", ")
 
-matrix = []
-for _ in range(n):
-    matrix.append(input().split())
+matrix = [[str(x) for x in input().split()] for _ in range(n)]
 
 turn = {
     1: player_one,
@@ -25,7 +23,7 @@ points = {
 
 turns_count = 1
 
-while points[player_one] > 0 and points[player_two] > 0:
+while True:
     row, col = [int(el) for el in input()[1:-1].split(", ")]
 
     if turns_count % 2 == 1:
@@ -40,26 +38,26 @@ while points[player_one] > 0 and points[player_two] > 0:
         current_hit = matrix[row][col]
         if current_hit.isdigit():
             points[current_player] -= int(current_hit)
-        if current_hit == "D":
+        elif current_hit == "D":
             hit_sum = \
                 (int(matrix[0][col]) +
                  int(matrix[row][n - 1]) +
                  int(matrix[n - 1][col]) +
                  int(matrix[row][0])) * 2
             points[current_player] -= hit_sum
-        if current_hit == "T":
+        elif current_hit == "T":
             hit_sum = \
                 (int(matrix[0][col]) +
                  int(matrix[row][n - 1]) +
                  int(matrix[n - 1][col]) +
                  int(matrix[row][0])) * 3
             points[current_player] -= hit_sum
-        if current_hit == "B":
+        elif current_hit == "B":
             print(f"{current_player} won the game with {math.ceil(turns_count / 2)} throws!")
             exit(0)
 
-        if points[player_one] <= 0 or points[player_two] <= 0:
-            break
+    if points[player_one] <= 0 or points[player_two] <= 0:
+        break
 
     turns_count += 1
 

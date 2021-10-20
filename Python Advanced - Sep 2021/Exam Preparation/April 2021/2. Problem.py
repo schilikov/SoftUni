@@ -57,3 +57,32 @@ while True:
     turns_count += 1
 
 print(f"{players_turns[turns_count % 2]} won the game with {math.ceil(turns_count / 2)} throws!")
+
+# Test Inputs
+
+# Ivan, Peter
+# 12 21 18 4 20 7 11
+# 9 D D D D D 10
+# 15 D T T T D 3
+# 2 D T B T D 19
+# 17 D T T T D 6
+# 22 D D D D D 14
+# 5 8 23 13 16 1 24
+# (3, 3)
+
+# George, Hristo
+# 17 8 21 6 13 3 24
+# 16 D D D D D 14
+# 7 D T T T D 15
+# 23 D T B T D 2
+# 9 D T T T D 22
+# 19 D D D D D 10
+# 12 18 4 20 5 11 1
+# (1, 0)
+# (2, 3)
+# (0, 0)
+# (4, 2)
+# (5, 1)
+# (3, 1)
+# (0, 0)
+# (2, 3)

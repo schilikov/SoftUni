@@ -11,3 +11,7 @@ def get_magic_triangle(number):
         triangle[-1].append(1)
 
     return triangle
+
+# Test Code
+
+# get_magic_triangle(5)
