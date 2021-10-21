@@ -29,8 +29,8 @@ for robot_input in robots_input:
     robots.append(Robot(robot_name, int(processing_time)))
 
 time_in_seconds = get_seconds_from_time(input())
-items = deque()
 
+items = deque()
 while True:
     item = input()
     if item == "End":
@@ -51,3 +51,21 @@ while items:
 
     if not found_robot:
         items.append(current_item)
+
+# Test Inputs
+
+# ROB-15;SS2-10;NX8000-3
+# 8:00:00
+# detail
+# glass
+# wood
+# apple
+# End
+
+# ROB-8
+# 7:59:59
+# detail
+# glass
+# wood
+# sock
+# End

@@ -22,3 +22,17 @@ for attempt in range(petrol_pumps):
         break
     else:
         queue.append(queue.popleft())
+
+# Test Inputs
+
+# 3
+# 1 5
+# 10 3
+# 3 4
+
+# 5
+# 22 5
+# 14 10
+# 52 7
+# 21 12
+# 36 9

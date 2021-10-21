@@ -13,3 +13,20 @@ while not name == "End":
     name = input()
 
 print(f"{len(queue)} people remaining.")
+
+# Test Inputs
+
+# George
+# Peter
+# William
+# Paid
+# Michael
+# Oscar
+# Olivia
+# Linda
+# End
+
+# Anna
+# Emma
+# Alexander
+# End

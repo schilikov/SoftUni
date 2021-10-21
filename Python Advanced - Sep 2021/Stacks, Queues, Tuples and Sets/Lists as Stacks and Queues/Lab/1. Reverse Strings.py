@@ -6,3 +6,8 @@ while len(word) > 0:
     result.append(word.pop())
 
 print(f"{''.join(result)}")
+
+# Test Inputs
+
+# I Love Python
+# Stacks and Queues

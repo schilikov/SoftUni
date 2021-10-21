@@ -25,3 +25,26 @@ while not command == "End":
     command = input()
 
 print(f"{liters} liters left")
+
+# Test Inputs
+
+# 2
+# Peter
+# Amy
+# Start
+# 2
+# refill 1
+# 1
+# End
+
+# 10
+# Peter
+# George
+# Amy
+# Alice
+# Start
+# 2
+# 3
+# 3
+# 3
+# End

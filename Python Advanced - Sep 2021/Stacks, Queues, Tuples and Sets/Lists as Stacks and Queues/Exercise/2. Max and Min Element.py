@@ -20,3 +20,28 @@ for _ in range(len(stack)):
     nums_reversed.append(stack.pop())
 
 print(", ".join(nums_reversed))
+
+# Test Inputs
+
+# 9
+# 1 97
+# 2
+# 1 20
+# 2
+# 1 26
+# 1 20
+# 3
+# 1 91
+# 4
+
+# 10
+# 2
+# 1 47
+# 1 66
+# 1 32
+# 4
+# 3
+# 1 25
+# 1 16
+# 1 8
+# 4

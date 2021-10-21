@@ -13,3 +13,11 @@ for _ in range(len(box)):
     current_racks_weight += current_clothing
 
 print(f"{rack_count}")
+
+# Test Inputs
+
+# 5 4 8 6 3 8 7 7 9
+# 16
+
+# 1 7 8 2 5 4 7 8 9 6 3 2 5 4 6
+# 20
