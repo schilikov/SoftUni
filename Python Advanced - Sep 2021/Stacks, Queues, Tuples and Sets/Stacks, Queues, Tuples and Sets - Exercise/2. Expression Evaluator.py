@@ -22,3 +22,9 @@ for ch in characters:
         numbers.append(int(ch))
 
 print(numbers.popleft())
+
+# Test Inputs
+
+# 6 3 - 2 1 * 5 /
+# 2 2 - 1 *
+# 10 23 * 4 2 / 30 10 + 100 50 - 2 -1 *

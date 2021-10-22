@@ -21,3 +21,20 @@ for _ in range(n):
 
 print(", ".join([str(x) for x in sorted(first)]))
 print(", ".join([str(x) for x in sorted(second)]))
+
+# Test Inputs
+
+# 1 2 3 4 5
+# 1 2 3
+# 3
+# Add First 5 6
+# Remove Second 8 9 11
+# Check Subset
+
+# 5 4 2 9 9 5 4
+# 1 1 1 5 6 5
+# 4
+# Add First 5 6 9 3
+# Add Second 1 2 3 3 3
+# Check Subset
+# Remove Second 1 2 3 4 5

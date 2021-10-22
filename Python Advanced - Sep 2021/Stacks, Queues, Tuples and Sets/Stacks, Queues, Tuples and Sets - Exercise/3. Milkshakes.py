@@ -39,3 +39,14 @@ if cup_of_milk:
     print(f"Milk: {', '.join([str(x) for x in cup_of_milk])}")
 else:
     print("Milk: empty")
+
+# Test Inputs
+
+# 20, 24, -5, 17, 22, 60, 26
+# 26, 60, 22, 17, 24, 10, 55
+
+# -10, -2, -30, 10
+# -5
+
+# 2, 3, 3, 7, 2
+# 2, 7, 3, 3, 2, 14, 6

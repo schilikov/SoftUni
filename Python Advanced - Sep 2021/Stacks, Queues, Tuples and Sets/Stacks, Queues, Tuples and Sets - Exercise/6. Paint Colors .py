@@ -41,3 +41,9 @@ for color in collected_colors:
         collected_colors.remove(color)
 
 print(collected_colors)
+
+# Test Inputs
+
+# d yel blu e low redd
+# r ue nge ora bl ed
+# re ple blu pop e pur d

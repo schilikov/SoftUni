@@ -53,3 +53,11 @@ if magic_levels:
     print(f"Magic left: {', '.join([str(x) for x in magic_levels])}")
 
 [print(f"{present}: {count}") for present, count in sorted(crafted_presents.items())]
+
+# Test Inputs
+
+# 10 -5 20 15 -30 10
+# 40 60 10 4 10 0
+
+# 30 5 15 60 0 30
+# -15 10 5 -15 25

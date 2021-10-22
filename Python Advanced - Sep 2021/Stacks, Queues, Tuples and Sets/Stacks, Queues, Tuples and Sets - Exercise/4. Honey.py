@@ -29,3 +29,13 @@ if bees:
     print(f"Bees left: {', '.join([str(x) for x in bees])}")
 if nectar:
     print(f"Nectar left: {', '.join([str(x) for x in nectar])}")
+
+# Test Inputs
+
+# 20 62 99 35 0 150
+# 120 60 10 1 70 10
+# + - + + / * - - /
+
+# 30
+# 15 9 5 150 8
+# * + + * -
