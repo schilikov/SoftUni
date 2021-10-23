@@ -39,6 +39,7 @@ def capturing_queens(board, king):
         (+1, 0),
         (+1, -1)
     ]
+
     queens = [searching_with_deltas(board, king, delta) for delta in deltas]
 
     return [queen for queen in queens if queen]

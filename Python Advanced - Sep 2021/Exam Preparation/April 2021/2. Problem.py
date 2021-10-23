@@ -22,9 +22,7 @@ points = {first_p: 501, second_p: 501}
 players_turns = {0: second_p, 1: first_p}
 turns_count = 1
 
-matrix = []
-for _ in range(n):
-    matrix.append(input().split())
+matrix = [[x for x in input().split()] for _ in range(n)]
 
 while True:
     row, col = [int(el) for el in input()[1:-1].split(", ")]
