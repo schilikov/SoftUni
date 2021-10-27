@@ -11,9 +11,9 @@ class Trainer:
             return "This pokemon is already caught"
 
         self.pokemons.append(pokemon)
-        return f"Caught {pokemon} with health {pokemon.health}"
+        return f"Caught {pokemon.pokemon_details()}"
 
-    def release_pokemon(self, pokemon_name):
+    def release_pokemon(self, pokemon_name: str):
         if pokemon_name not in self.pokemons:
             return "Pokemon is not caught"
 
