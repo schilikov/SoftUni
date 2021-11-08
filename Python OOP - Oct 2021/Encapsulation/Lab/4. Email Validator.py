@@ -4,8 +4,8 @@ import re
 class EmailValidator:
     def __init__(self, min_length, mails, domains):
         self.min_length = min_length
-        self.mails = mails
-        self.domains = domains
+        self.mails = set(mails)
+        self.domains = set(domains)
 
     def __is_name_valid(self, name):
         return len(name) >= self.min_length
