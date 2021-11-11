@@ -2,7 +2,7 @@ class Calculator:
 
     @staticmethod
     def add(*args):
-        return sum(x for x in args)
+        return sum(args)
 
     @staticmethod
     def multiply(*args):
@@ -14,19 +14,19 @@ class Calculator:
 
     @staticmethod
     def divide(*args):
-        first_num = args[0]
-        for i in range(1, len(args)):
-            first_num /= args[i]
+        result = args[0]
+        for x in args[1:]:
+            result /= x
 
-        return first_num
+        return result
 
     @staticmethod
     def subtract(*args):
-        first_num = args[0]
-        for i in range(1, len(args)):
-            first_num -= args[i]
+        result = args[0]
+        for x in args[1:]:
+            result -= x
 
-        return first_num
+        return result
 
 
 print(Calculator.add(5, 10, 4))
