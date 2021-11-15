@@ -18,11 +18,7 @@ class PowerOutletConnectable:
         return f"Connected {device} to POWER_OUTLET"
 
 
-class EntertainmentDevice(PowerOutletConnectable):
-    pass
-
-
-class Television(EntertainmentDevice, RCAConnectable, HDMIConnectable):
+class Television(PowerOutletConnectable, RCAConnectable, HDMIConnectable):
     def connect_to_dvd(self, dvd_player):
         self.connect_to_device_via_rca_cable(dvd_player)
 
@@ -33,7 +29,7 @@ class Television(EntertainmentDevice, RCAConnectable, HDMIConnectable):
         self.connect_device_to_power_outlet(self)
 
 
-class DVDPlayer(EntertainmentDevice, HDMIConnectable):
+class DVDPlayer(PowerOutletConnectable, HDMIConnectable):
     def connect_to_tv(self, television):
         self.connect_to_device_via_hdmi_cable(television)
 
@@ -41,7 +37,7 @@ class DVDPlayer(EntertainmentDevice, HDMIConnectable):
         self.connect_device_to_power_outlet(self)
 
 
-class GameConsole(EntertainmentDevice, HDMIConnectable, EthernetConnectable):
+class GameConsole(PowerOutletConnectable, HDMIConnectable, EthernetConnectable):
     def connect_to_tv(self, television):
         self.connect_to_device_via_hdmi_cable(television)
 
@@ -52,7 +48,7 @@ class GameConsole(EntertainmentDevice, HDMIConnectable, EthernetConnectable):
         self.connect_device_to_power_outlet(self)
 
 
-class Router(EntertainmentDevice, EthernetConnectable):
+class Router(PowerOutletConnectable, EthernetConnectable):
     def connect_to_tv(self, television):
         self.connect_to_device_via_ethernet_cable(television)
 
