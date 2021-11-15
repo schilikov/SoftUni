@@ -2,21 +2,28 @@ from abc import abstractmethod, ABC
 
 
 class Duck(ABC):
-    pass
+    @abstractmethod
+    def quack(self):
+        pass
+
+    @abstractmethod
+    def walk(self):
+        pass
+
+    @abstractmethod
+    def fly(self):
+        pass
 
 
 class RubberDuck(Duck):
-    @staticmethod
-    def quack():
+    def quack(self):
         return "Squeek"
 
-    @staticmethod
-    def walk():
+    def walk(self):
         """Rubber duck can walk only if you move it"""
         raise Exception('I cannot walk by myself')
 
-    @staticmethod
-    def fly():
+    def fly(self):
         """Rubber duck can fly only if you throw it"""
         raise Exception('I cannot fly by myself')
 
@@ -27,12 +34,10 @@ class RobotDuck(Duck):
     def __init__(self):
         self.height = 0
 
-    @staticmethod
-    def quack():
+    def quack(self):
         return 'Robotic quacking'
 
-    @staticmethod
-    def walk():
+    def walk(self):
         return 'Robotic walking'
 
     def fly(self):
@@ -45,7 +50,3 @@ class RobotDuck(Duck):
 
     def land(self):
         self.height = 0
-
-
-
-
