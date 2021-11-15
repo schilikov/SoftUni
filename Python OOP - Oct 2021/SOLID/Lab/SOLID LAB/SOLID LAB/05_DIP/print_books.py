@@ -4,12 +4,10 @@ class Book:
 
 
 class Formatter:
-    def format(self, book: Book) -> str:
+    def format(self, book: Book):
         return book.content
 
 
-class Printer:
+class Printer(Formatter):
     def get_book(self, book: Book):
-        formatter = Formatter()
-        formatted_book = formatter.format(book)
-        return formatted_book
+        return self.get_book(book)
