@@ -1,11 +1,28 @@
-class EntertainmentDevice:
-    def connect_to_device_via_hdmi_cable(self, device): pass
-    def connect_to_device_via_rca_cable(self, device): pass
-    def connect_to_device_via_ethernet_cable(self, device): pass
-    def connect_device_to_power_outlet(self, device): pass
+class HDMIConnectable:
+    def connect_to_device_via_hdmi_cable(self, device):
+        return f"Connected {self} to {device} with HDMI"
 
 
-class Television(EntertainmentDevice):
+class RCAConnectable:
+    def connect_to_device_via_rca_cable(self, device):
+        return f"Connected {self} to {device} with RCA"
+
+
+class EthernetConnectable:
+    def connect_to_device_via_ethernet_cable(self, device):
+        return f"Connected {self} to {device} with Ethernet"
+
+
+class PowerOutletConnectable:
+    def connect_device_to_power_outlet(self, device):
+        return f"Connected {device} to POWER_OUTLET"
+
+
+class EntertainmentDevice(PowerOutletConnectable):
+    pass
+
+
+class Television(EntertainmentDevice, RCAConnectable, HDMIConnectable):
     def connect_to_dvd(self, dvd_player):
         self.connect_to_device_via_rca_cable(dvd_player)
 
@@ -16,7 +33,7 @@ class Television(EntertainmentDevice):
         self.connect_device_to_power_outlet(self)
 
 
-class DVDPlayer(EntertainmentDevice):
+class DVDPlayer(EntertainmentDevice, HDMIConnectable):
     def connect_to_tv(self, television):
         self.connect_to_device_via_hdmi_cable(television)
 
@@ -24,7 +41,7 @@ class DVDPlayer(EntertainmentDevice):
         self.connect_device_to_power_outlet(self)
 
 
-class GameConsole(EntertainmentDevice):
+class GameConsole(EntertainmentDevice, HDMIConnectable, EthernetConnectable):
     def connect_to_tv(self, television):
         self.connect_to_device_via_hdmi_cable(television)
 
@@ -35,7 +52,7 @@ class GameConsole(EntertainmentDevice):
         self.connect_device_to_power_outlet(self)
 
 
-class Router(EntertainmentDevice):
+class Router(EntertainmentDevice, EthernetConnectable):
     def connect_to_tv(self, television):
         self.connect_to_device_via_ethernet_cable(television)
 
