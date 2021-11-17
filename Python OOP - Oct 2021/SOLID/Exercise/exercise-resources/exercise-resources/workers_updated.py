@@ -32,10 +32,16 @@ class SuperWorker(WorkableWorker, EatableWorker):
         time.sleep(3)
 
 
-class WorkManager:
+class Manager(ABC):
     def __init__(self):
         self.worker = None
 
+    @abstractmethod
+    def set_worker(self, worker):
+        pass
+
+
+class WorkManager(Manager):
     def set_worker(self, worker):
         assert isinstance(worker, WorkableWorker), "`worker` must be of type {}".format(WorkableWorker)
 
@@ -45,10 +51,7 @@ class WorkManager:
         self.worker.work()
 
 
-class BreakManager:
-    def __init__(self):
-        self.worker = None
-
+class BreakManager(Manager):
     def set_worker(self, worker):
         assert isinstance(worker, EatableWorker), "`worker` must be of type {}".format(EatableWorker)
 
