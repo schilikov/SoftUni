@@ -2,17 +2,17 @@ class CustomRange:
     def __init__(self, start, end):
         self.start = start
         self.end = end
-        self.index = 0
+        self.current_number = self.start
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        if self.start > self.end:
+        if self.current_number > self.end:
             raise StopIteration
 
-        value = self.start
-        self.start += 1
+        value = self.current_number
+        self.current_number += 1
         return value
 
 
