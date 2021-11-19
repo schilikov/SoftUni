@@ -14,9 +14,8 @@ class vowels:
                 value = self.text[self.idx]
                 self.idx += 1
                 return value
-            else:
-                self.idx += 1
 
+            self.idx += 1
         raise StopIteration
 
 
