@@ -1,9 +1,7 @@
 def even_parameters(func):
     def wrapper(*args):
-        evens = [x for x in args if x % 2 == 0]
-        result = func(args)
-        if len(evens) == len(args):
-            return result
+        if all([isinstance(x, int) and x % 2 == 0 for x in args]):
+            return func(*args)
 
         return "Please use only even numbers!"
 
