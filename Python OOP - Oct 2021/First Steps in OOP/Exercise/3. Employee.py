@@ -1,4 +1,6 @@
 class Employee:
+    MONTHS_IN_YEAR = 12
+
     def __init__(self, id, first_name, last_name, salary):
         self.id = id
         self.first_name = first_name
@@ -9,7 +11,7 @@ class Employee:
         return f"{self.first_name} {self.last_name}"
 
     def get_annual_salary(self):
-        return self.salary * 12
+        return self.salary * Employee.MONTHS_IN_YEAR
 
     def raise_salary(self, amount):
         self.salary += amount
