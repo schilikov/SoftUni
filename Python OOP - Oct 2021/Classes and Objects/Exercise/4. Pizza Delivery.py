@@ -1,11 +1,11 @@
 class PizzaDelivery:
-    def __init__(self, name: str, price: float, ingredients: dict):
+    def __init__(self, name, price, ingredients):
         self.name = name
         self.price = price
         self.ingredients = ingredients
         self.ordered = False
 
-    def add_extra(self, ingredient: str, quantity: int, price_per_quantity: float):
+    def add_extra(self, ingredient, quantity, price_per_quantity):
         if self.ordered:
             return f"Pizza {self.name} already prepared, and we can't make any changes!"
 
@@ -16,7 +16,7 @@ class PizzaDelivery:
 
         self.price += quantity * price_per_quantity
 
-    def remove_ingredient(self, ingredient: str, quantity: int, price_per_quantity: float):
+    def remove_ingredient(self, ingredient, quantity, price_per_quantity):
         if self.ordered:
             return f"Pizza {self.name} already prepared, and we can't make any changes!"
 
@@ -31,8 +31,9 @@ class PizzaDelivery:
 
     def make_order(self):
         self.ordered = True
-        return f"You've ordered pizza {self.name} prepared with {', '.join([f'{k}: {v}' for k, v in self.ingredients.items()])}" \
-               f" and the price will be {self.price}lv."
+        return f"You've ordered pizza {self.name} prepared " \
+               f"with {', '.join([f'{k}: {v}' for k, v in self.ingredients.items()])} " \
+               f"and the price will be {self.price}lv."
 
 # Test Code
 
