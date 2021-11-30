@@ -29,6 +29,7 @@ class Time:
 
         return Time.get_time(self)
 
+
 # Test Codes
 
 # time = Time(9, 30, 59)
