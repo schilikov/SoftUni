@@ -17,7 +17,7 @@ class Guild:
         player.guild = self.name
         return f"Welcome player {player.name} to the guild {self.name}"
 
-    def kick_player(self, player_name: str):
+    def kick_player(self, player_name):
         for player in self.players:
             if player.name == player_name:
                 self.players.remove(player)
