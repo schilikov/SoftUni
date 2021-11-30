@@ -27,7 +27,7 @@ class Time:
                 if self.hours > Time.max_hours:
                     self.hours = 0
 
-        return Time.get_time(self)
+        return self.get_time()
 
 
 # Test Codes
