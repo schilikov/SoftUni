@@ -21,7 +21,7 @@ class Album:
         self.songs.append(song)
         return f"Song {song.name} has been added to the album {self.name}."
 
-    def remove_song(self, song_name: str):
+    def remove_song(self, song_name):
         if self.published:
             return f"Cannot remove songs. Album is published."
 
