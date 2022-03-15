@@ -1,0 +1,15 @@
+{% extends 'basic/basic.html' %}
+
+{% block basic %}
+<ul>
+    {% for employee in employees %}
+        <li>
+            {{ employee.first_name }} {{ employee.last_name }} - Works as a <i>{{ employee.get_job_title_display }}</i> in the "{{ employee.department.name }}" Department in <strong>{{ employee.company }}</strong>
+            <hr>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+</body>
+</html>
+
