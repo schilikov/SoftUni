@@ -1,15 +1,34 @@
 {% extends 'basic/basic.html' %}
 
 {% block basic %}
-<ul>
-    {% for employee in employees %}
-        <li>
-            {{ employee.first_name }} {{ employee.last_name }} - Works as a <i>{{ employee.get_job_title_display }}</i> in the "{{ employee.department.name }}" Department in <strong>{{ employee.company }}</strong>
-            <hr>
-        </li>
-    {% endfor %}
-</ul>
+    <h1>The Employees App!</h1>
+
+    <h2>Bound(Django) form</h2>
+
+    <form method="post" action="{% url 'index' %}">
+        {{ employee_form }}
+        <button>Save</button>
+    </form>
+
+    <h3>Unbound(Pure HTML) form</h3>
+
+    <form>
+        <input type="text" required>
+        <input type="number" required>
+        <input type="range" required>
+        <input type="email" required>
+        <select>
+            <option>One</option>
+            <option>Two</option>
+            <option>Three</option>
+        </select>
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="radio" name="radios">
+        <input type="radio" name="radios">
+        <input type="radio" name="radios">
+        <button>Save</button>
+    </form>
 {% endblock %}
-</body>
-</html>
 
